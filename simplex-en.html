@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Simplex Solver</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header style="display:flex;align-items:center;gap:12px;padding:12px;"><img src="assets/logo-f-italic.svg" style="height:48px"><h2 class="bi-text"><span data-en>Simplex Solver</span><span data-ar>محلل السمبلكس</span></h2>
+  <div style="margin-left:auto"><button class="lang-switch">EN/AR</button></div>
+</header>
+<main style="padding:16px" class="bi-text">
+  <div><p>Enter a maximization LP. Example fields: objective coefficients (comma), constraints as rows of coeffs, sign, RHS.</p>
+  <div>
+    <label><span data-en>Objective c (comma):</span> <input id="c" value="3,2" size="30"></label><br>
+    <label><span data-en>Constraints (JSON array):</span></label><br>
+    <textarea id="cons" rows="6" cols="80">[{" + '"coeff":[2,1],"sign":"<=","b":18},{" + '"coeff":[2,3],"sign":"<=","b":42},{" + '"coeff":[3,1],"sign":"<=","b":24}]' + "</textarea><br>
+    <button id="solve"><span data-en>Solve</span></button>
+  </div>
+  <pre id="out"></pre></div>
+  <div style="display:none"><p>ادخلي مسألة تكبير (Max). الحقول: معاملات الدالة الهدف مفصولة بفاصلة، والقيود كمصفوفة JSON.</p>
+  <div>
+    <label>المعاملات: <input id="c" value="3,2" size="30"></label><br>
+    <label>القيود (JSON):</label><br>
+    <textarea id="cons" rows="6" cols="80">[{"coeff":[2,1],"sign":"<=","b":18},{"coeff":[2,3],"sign":"<=","b":42},{"coeff":[3,1],"sign":"<=","b":24}]</textarea><br>
+    <button id="solve">حل</button>
+  </div>
+  <pre id="out"></pre></div>
+  <p><a href="index.html"><span data-en>Back</span><span data-ar>العودة</span></a></p>
+</main>
+<script src="lang-toggle.js"></script>
+
+<script src="solvers/simplex-solver.js"></script>
+<script src="lang-toggle.js"></script>
+</body></html>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>PERT / CPM</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header style="display:flex;align-items:center;gap:12px;padding:12px;"><img src="assets/logo-f-italic.svg" style="height:48px"><h2 class="bi-text"><span data-en>PERT / CPM</span><span data-ar>بيرت / CPM</span></h2>
+  <div style="margin-left:auto"><button class="lang-switch">EN/AR</button></div>
+</header>
+<main style="padding:16px" class="bi-text">
+  <div><p>Enter activities as JSON array: {id, duration, preds: []}</p>
+  <textarea id="acts" rows="8" cols="80">[{"id":"A","duration":4,"preds":[]},{"id":"B","duration":3,"preds":["A"]},{"id":"C","duration":5,"preds":["A"]},{"id":"D","duration":2,"preds":["B","C"]}]</textarea><br>
+  <button id="go">Compute</button>
+  <pre id="out"></pre></div>
+  <div style="display:none"><p>ادخلي الأنشطة كـ JSON: {id, duration, preds: []}</p>
+  <textarea id="acts" rows="8" cols="80">[{"id":"A","duration":4,"preds":[]},{"id":"B","duration":3,"preds":["A"]},{"id":"C","duration":5,"preds":["A"]},{"id":"D","duration":2,"preds":["B","C"]}]</textarea><br>
+  <button id="go">احسب</button>
+  <pre id="out"></pre></div>
+  <p><a href="index.html"><span data-en>Back</span><span data-ar>العودة</span></a></p>
+</main>
+<script src="lang-toggle.js"></script>
+
+<script src="solvers/pert-cpm.js"></script>
+<script src="lang-toggle.js"></script>
+</body></html>

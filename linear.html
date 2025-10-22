@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DECAYLA — Linear Programming (2 variables)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="DECAYLA logo" class="logo-img" />
+      <div>
+        <h1>DECAYLA</h1>
+        <p class="tagline">Decisions Reimagined by Kayla</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container single">
+    <section class="card">
+      <h2>Linear Programming — 2-variable demo</h2>
+      <p>Enter objective function and constraints. Example objective: <code>max 3x1 + 5x2</code></p>
+
+      <label>Objective (e.g. <em>max 3x1 + 5x2</em>):</label>
+      <textarea id="objective" placeholder="max 3x1 + 5x2"></textarea>
+
+      <label>Constraints (one per line, e.g. <em>2x1 + 1x2 <= 100</em>):</label>
+      <textarea id="constraints" placeholder="2x1 + 1x2 <= 100
+1x1 + 3x2 <= 120"></textarea>
+
+      <div class="btn-row">
+        <button id="solveLp">Solve (grid-search approx)</button>
+        <a href="index.html" class="btn-link">Back to Dashboard</a>
+      </div>
+
+      <div id="result" class="result"></div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>2-variable LP Visualiser</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header style="display:flex;align-items:center;gap:12px;padding:12px;"><img src="assets/logo-f-italic.svg" style="height:48px"><h2 class="bi-text"><span data-en>2-variable LP Visualiser</span><span data-ar>مرسّم LP ثنائي المتغيرات</span></h2>
+  <div style="margin-left:auto"><button class="lang-switch">EN/AR</button></div>
+</header>
+<main style="padding:16px" class="bi-text">
+  <div><p>Enter objective and constraints (works for 2 variables).</p>
+  <label>Objective c: <input id="c" value="3,2" size="30"></label><br>
+  <textarea id="cons" rows="6" cols="80">[{" + '"coeff":[2,1],"sign":"<=","b":18},{" + '"coeff":[2,3],"sign":"<=","b":42},{" + '"coeff":[3,1],"sign":"<=","b":24}]' + "</textarea><br>
+  <button id="draw">Draw</button><br>
+  <canvas id="cv" width="700" height="450" style="border:1px solid #ddd;margin-top:10px"></canvas>
+  <pre id="out"></pre></div>
+  <div style="display:none"><p>ادخلي الهدف والقيود (يعمل مع متغيرين فقط).</p>
+  <label>المعاملات: <input id="c" value="3,2" size="30"></label><br>
+  <textarea id="cons" rows="6" cols="80">[{"coeff":[2,1],"sign":"<=","b":18},{"coeff":[2,3],"sign":"<=","b":42},{"coeff":[3,1],"sign":"<=","b":24}]</textarea><br>
+  <button id="draw">ارسم</button><br>
+  <canvas id="cv" width="700" height="450" style="border:1px solid #ddd;margin-top:10px"></canvas>
+  <pre id="out"></pre></div>
+  <p><a href="index.html"><span data-en>Back</span><span data-ar>العودة</span></a></p>
+</main>
+<script src="lang-toggle.js"></script>
+
+<script src="solvers/simplex-solver.js"></script>
+<script src="solvers/lp-visualizer.js"></script>
+<script src="lang-toggle.js"></script>
+</body></html>

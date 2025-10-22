@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>General Linear Programming</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header style="display:flex;align-items:center;gap:12px;padding:12px;"><img src="assets/logo-f-italic.svg" style="height:48px"><h2 class="bi-text"><span data-en>General Linear Programming</span><span data-ar>البرمجة الخطية العامة</span></h2>
+  <div style="margin-left:auto"><button class="lang-switch">EN/AR</button></div>
+</header>
+<main style="padding:16px" class="bi-text">
+  <div><p>General Linear Programming solver. Enter objective coefficients and a list of constraints (each with coeff array, sign, and RHS).</p>
+<div>
+  <label>Objective c (comma): <input id="c" value="3,2,0" size="40"></label><br>
+  <label>Constraints (JSON):</label><br>
+  <textarea id="cons" rows="8" cols="80">[{"coeff":[2,1,0],"sign":"<=","b":18},{"coeff":[2,3,0],"sign":"<=","b":42},{"coeff":[3,1,0],"sign":"<=","b":24}]</textarea><br>
+  <button id="solve">Solve LP</button>
+</div>
+<pre id="out"></pre>
+<script>
+document.getElementById('solve').onclick = ()=>{
+  const c = document.getElementById('c').value.split(',').map(x=>parseFloat(x.trim()));
+  let cons = JSON.parse(document.getElementById('cons').value);
+  const res = DecaylaSimplex.solveLP({c, constraints:cons});
+  document.getElementById('out').textContent = JSON.stringify(res, null, 2);
+};
+</script></div>
+  <div style="display:none"><p>محلل البرمجة الخطية العام. ادخلي معاملات الدالة الهدف ومصفوفة القيود (كل قيد: coeff, sign, b).</p>
+<div>
+  <label>المعاملات: <input id="c" value="3,2,0" size="40"></label><br>
+  <label>القيود (JSON):</label><br>
+  <textarea id="cons" rows="8" cols="80">[{"coeff":[2,1,0],"sign":"<=","b":18},{"coeff":[2,3,0],"sign":"<=","b":42},{"coeff":[3,1,0],"sign":"<=","b":24}]</textarea><br>
+  <button id="solve">حل LP</button>
+</div>
+<pre id="out"></pre>
+<script>
+document.getElementById('solve').onclick = ()=>{
+  const c = document.getElementById('c').value.split(',').map(x=>parseFloat(x.trim()));
+  let cons = JSON.parse(document.getElementById('cons').value);
+  const res = DecaylaSimplex.solveLP({c, constraints:cons});
+  document.getElementById('out').textContent = JSON.stringify(res, null, 2);
+};
+</script></div>
+  <p><a href="index.html"><span data-en>Back</span><span data-ar>العودة</span></a></p>
+</main>
+<script src="lang-toggle.js"></script>
+
+<script src="solvers/simplex-solver.js"></script>
+<script src="lang-toggle.js"></script>
+</body></html>

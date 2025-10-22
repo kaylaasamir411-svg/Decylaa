@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DECAYLA — Simplex Method</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="DECAYLA logo" class="logo-img" />
+      <div>
+        <h1>DECAYLA</h1>
+        <p class="tagline">Decisions Reimagined by Kayla</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container single">
+    <section class="card">
+      <h2>Simplex Method (prototype)</h2>
+      <p>This page is a clean interface to run an LP using the Simplex algorithm. The first offline prototype includes a basic parser and a frontend simplex placeholder. For exact Simplex calculations for many constraints, I can add a robust JS solver or a backend implementation.</p>
+
+      <label>Objective (e.g. <em>max 4x1 + 3x2</em>):</label>
+      <textarea id="s_objective" placeholder="max 4x1 + 3x2"></textarea>
+
+      <label>Constraints (one per line):</label>
+      <textarea id="s_constraints" placeholder="2x1 + 1x2 <= 100
+1x1 + 2x2 <= 80"></textarea>
+
+      <div class="btn-row">
+        <button id="runSimplex">Run Simplex (approx)</button>
+        <a href="index.html" class="btn-link">Back to Dashboard</a>
+      </div>
+
+      <div id="simplexResult" class="result"></div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

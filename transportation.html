@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DECAYLA — Transportation Model</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="DECAYLA logo" class="logo-img" />
+      <div>
+        <h1>DECAYLA</h1>
+        <p class="tagline">Decisions Reimagined by Kayla</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container single">
+    <section class="card">
+      <h2>Transportation Model — North-West Corner (quick feasible)</h2>
+      <p>Enter supply values (comma separated) and demand values (comma separated) and the cost matrix rows (one row per line, comma separated).</p>
+
+      <label>Supply (e.g. <em>20,30</em>):</label>
+      <input id="supply" placeholder="20,30" />
+
+      <label>Demand (e.g. <em>15,35</em>):</label>
+      <input id="demand" placeholder="15,35" />
+
+      <label>Cost rows (one line per supply, comma-separated):</label>
+      <textarea id="costs" placeholder="8,6
+9,7"></textarea>
+
+      <div class="btn-row">
+        <button id="solveTransport">Compute NW-corner solution</button>
+        <a href="index.html" class="btn-link">Back to Dashboard</a>
+      </div>
+
+      <div id="transportResult" class="result"></div>
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

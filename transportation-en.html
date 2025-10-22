@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Transportation Solver (Vogel)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header style="display:flex;align-items:center;gap:12px;padding:12px;"><img src="assets/logo-f-italic.svg" style="height:48px"><h2 class="bi-text"><span data-en>Transportation Solver (Vogel)</span><span data-ar>حل مسائل النقل (فوغل)</span></h2>
+  <div style="margin-left:auto"><button class="lang-switch">EN/AR</button></div>
+</header>
+<main style="padding:16px" class="bi-text">
+  <div><p>Enter supply, demand and cost matrix as JSON.</p>
+  <label>Supply: <input id="supply" value="[20,30]" size="30"></label><br>
+  <label>Demand: <input id="demand" value="[10,40]" size="30"></label><br>
+  <label>Cost matrix (2D array):</label><br>
+  <textarea id="cost" rows="6" cols="60">[[8,6],[9,7]]</textarea><br>
+  <button id="calc"><span data-en>Compute</span></button>
+  <pre id="out"></pre></div>
+  <div style="display:none"><p>ادخلي العرض، الطلب ومصفوفة التكاليف بصيغة JSON.</p>
+  <label>العرض: <input id="supply" value="[20,30]" size="30"></label><br>
+  <label>الطلب: <input id="demand" value="[10,40]" size="30"></label><br>
+  <label>مصفوفة التكاليف (2D):</label><br>
+  <textarea id="cost" rows="6" cols="60">[[8,6],[9,7]]</textarea><br>
+  <button id="calc">احسب</button>
+  <pre id="out"></pre></div>
+  <p><a href="index.html"><span data-en>Back</span><span data-ar>العودة</span></a></p>
+</main>
+<script src="lang-toggle.js"></script>
+
+<script src="solvers/transportation-solver.js"></script>
+<script src="lang-toggle.js"></script>
+</body></html>
